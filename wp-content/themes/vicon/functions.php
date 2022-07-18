@@ -42,3 +42,17 @@ function custom_styles($init_array)
 }
 
 add_filter('tiny_mce_before_init', 'custom_styles');
+
+function sg_first_block_is($block_handle) {
+    $post = get_post();
+
+    if(has_blocks($post->post_content)) {
+        $blocks = parse_blocks($post->post_content);
+
+        if($blocks[0]['blockName'] === $block_handle) {
+            return true;
+        }else {
+            return false;
+        }
+    }
+}

@@ -4,7 +4,7 @@ function allow_blocks($blocks, $post)
 {
 
     $blocks = [
-        'acf/twocolumn', 'acf/text',
+        'acf/twocolumn', 'acf/text', 'acf/banner',
     ];
 
     return $blocks;
@@ -28,6 +28,14 @@ function register_blocks()
         'name' => 'text',
         'title' => 'Tekst indhold',
         'render_template' => __DIR__ . '/partials/text_content/text_content.php',
+        'category' => 'layout',
+        'icon' => 'welcome-write-blog',
+        'mode' => 'preview',
+    ]);
+    acf_register_block([
+        'name' => 'banner',
+        'title' => 'Banner',
+        'render_template' => __DIR__ . '/partials/banner/banner.php',
         'category' => 'layout',
         'icon' => 'welcome-write-blog',
         'mode' => 'preview',

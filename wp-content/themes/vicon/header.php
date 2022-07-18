@@ -15,17 +15,27 @@
     <?php wp_head(); ?>
 
 
-
-
     <link rel="icon" type="image/png" href="<?php bloginfo('stylesheet_directory'); ?>/images/favicon/favicon.png"/>
 </head>
 <body>
+<?php
+
+$headerColor = 'banner';
+
+if (!sg_first_block_is('acf/banner')) {
+    $headerColor = 'nobanner';
+}
+?>
 <input type="checkbox" name="menuToggle" id="menuToggle"/>
-<header>
+<header class="<?= $headerColor ?>">
     <div class="container">
         <section class="logo">
             <a href="<?php echo home_url(); ?>">
-                <?= file_get_contents(get_template_directory() . "/images/SVG/logo/logo_simple.svg"); ?>
+                <div class="white">
+                    <?php
+                    echo file_get_contents(get_template_directory() . "/images/logo/Vicon_logo.svg");
+                    ?>
+                </div>
             </a>
         </section>
         <label for="menuToggle">
