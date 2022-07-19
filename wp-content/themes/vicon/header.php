@@ -27,7 +27,7 @@ if (!sg_first_block_is('acf/banner')) {
 }
 ?>
 <input type="checkbox" name="menuToggle" id="menuToggle"/>
-<header class="<?= $headerColor ?>">
+<header id="header" class="<?= $headerColor ?>">
     <div class="container">
         <section class="logo">
             <a href="<?php echo home_url(); ?>">

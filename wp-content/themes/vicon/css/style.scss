@@ -12,11 +12,10 @@
 }
 
 
-@import "../gutenberg/partials/two_column/two_column";
-@import "../gutenberg/partials/text_content/text_content";
 
 body:not(.wp-admin),
 .acf-block-preview {
+  background-color: $secoundary-color;
 
   * {
     box-sizing: border-box;
@@ -84,3 +83,10 @@ body:not(.wp-admin),
     color: $primary-color;
   }
 }
+
+
+
+@import "../gutenberg/partials/two_column/two_column";
+@import "../gutenberg/partials/text_content/text_content";
+@import "../gutenberg/partials/banner/banner";
+@import "../gutenberg/partials/application/application";
