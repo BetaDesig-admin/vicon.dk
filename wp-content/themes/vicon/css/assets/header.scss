@@ -52,17 +52,15 @@ header {
 
           li {
             a {
-              padding: 20px;
+              margin: 0 20px;
               color: inherit;
               text-decoration: none;
               font-size: 18px;
               font-family: $regular-font;
-
               text-shadow: 2px 3px 5px rgba(46, 46, 46, .4);
 
               &:hover {
-                color: $primary-color;
-                transition: .3s ease-in-out color;
+                border-bottom: 1px solid $primary-color;
                 position: relative;
               }
             }
@@ -70,7 +68,7 @@ header {
             &.current_page_item {
               a {
                 position: relative;
-                color: $primary-color;
+                border-bottom: 1px solid $primary-color;
               }
             }
           }
@@ -96,7 +94,7 @@ header {
   }
 
   &.banner {
-    position: fixed;
+    position: absolute;
 
     @media(min-width: 1025px) {
       transition: .2s ease-in-out background-color;

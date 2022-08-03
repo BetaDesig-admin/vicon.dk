@@ -7,7 +7,7 @@ $text = get_field('text');
     <div class="container">
         <?php if ($heading) { ?>
             <div class="header">
-                <div class="heading"><?= $heading ?></div>
+                <div class="heading"><h2><?= $heading ?></h2></div>
                 <div class="text"><?= $text ?></div>
             </div>
         <?php } ?>

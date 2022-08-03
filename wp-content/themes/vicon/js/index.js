@@ -11,24 +11,24 @@ function remove_class_on_scroll(element) {
 }
 
 
-window.addEventListener('scroll', function () {
-        let header = document.getElementById("header");
-        if (header.classList.contains('banner')) {
-            scrollpos = window.scrollY;
-            if (!header.classList.contains('fixed')) {
-                if (scrollpos < 1024) {
-                    add_class_on_scroll(header);
-                }
-            }
-
-            if (header.classList.contains('fixed')) {
-                if (scrollpos < 50) {
-                    remove_class_on_scroll(header);
-                }
-            }
-        }
-    }
-);
+// window.addEventListener('scroll', function () {
+//         let header = document.getElementById("header");
+//         if (header.classList.contains('banner')) {
+//             scrollpos = window.scrollY;
+//             if (!header.classList.contains('fixed')) {
+//                 if (scrollpos < 1024) {
+//                     add_class_on_scroll(header);
+//                 }
+//             }
+//
+//             if (header.classList.contains('fixed')) {
+//                 if (scrollpos < 50) {
+//                     remove_class_on_scroll(header);
+//                 }
+//             }
+//         }
+//     }
+// );
 
 setTimeout(function () {
     let formNav = document.getElementById('formNav');
@@ -41,15 +41,16 @@ setTimeout(function () {
         let html = '';
         let text = '';
         let isCurrent = '';
+        let order = '';
         html += '<ul>'
         for (let step of fieldsets) {
             if (step.classList.contains('cf7mls_current_fs')) {
                 isCurrent = 'isCurrent';
             }
-
+            order = step.getAttribute('data-cf7mls-order');
             text = step.getElementsByTagName('h3')[0];
 
-            html += '<li class="' + isCurrent + '">' +
+            html += '<li data-order="' + order + '" class="' + isCurrent + '">' +
                 '<svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 2">\n' +
                 '  <line id="Line_51" data-name="Line 51" x2="50"  transform="translate(0 1)" fill="none" stroke="CurrentColor" stroke-width="2"/>\n' +
                 '</svg>\n'
@@ -127,7 +128,59 @@ setTimeout(function () {
         }
     }
 
-}, 1);
+
+    document.querySelectorAll('.cf7mls_next').forEach(item => {
+        item.addEventListener('click', event => {
+            setTimeout(function () {
+                UpdateNav();
+            }, 300)
+        })
+    })
+
+
+    document.querySelectorAll('.cf7mls_back').forEach(item => {
+        item.addEventListener('click', event => {
+            setTimeout(function () {
+                UpdateNavBack();
+            }, 300)
+        })
+    })
+
+    function UpdateNavBack() {
+        let ParentElement = document.querySelector('.cf7mls_current_fs');
+        let ParentNum = ParentElement.getAttribute('data-cf7mls-order');
+        ParentNum++;
+        let element = document.querySelectorAll('li[data-order="' + ParentNum + '"]');
+        element[0].classList.remove('isCurrent');
+    }
+
+    function UpdateNav() {
+        let error = document.querySelector('fieldset div.wpcf7-response-output');
+        let canPass = true;
+        if (error !== null && error.classList.contains('wpcf7-validation-errors')) {
+            canPass = false;
+        }
+
+        let ParentElement = document.querySelector('.cf7mls_current_fs');
+        let ParentNum = ParentElement.getAttribute('data-cf7mls-order');
+        let element = document.querySelectorAll('li[data-order="' + ParentNum + '"]');
+
+        if (canPass) {
+            element[0].classList.add('isCurrent');
+        }
+    }
+
+    let fileUpload = document.getElementById('profileImage');
+
+    if (fileUpload) {
+        let DisplayFileName = document.getElementById('filename');
+        fileUpload.addEventListener('change',function(){
+            let fileName = fileUpload.files[0].name;
+            DisplayFileName.innerText = 'Nuværende fil: ' + fileName;
+        });
+    }
+
+}, 100);
 
 
 

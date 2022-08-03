@@ -4,7 +4,7 @@ function allow_blocks($blocks, $post)
 {
 
     $blocks = [
-        'acf/twocolumn', 'acf/text', 'acf/banner','acf/application'
+        'acf/twocolumn', 'acf/text', 'acf/banner','acf/application', 'acf/contactinfo'
     ];
 
     return $blocks;
@@ -44,6 +44,14 @@ function register_blocks()
         'name' => 'application',
         'title' => 'Indsend CV',
         'render_template' => __DIR__ . '/partials/application/application.php',
+        'category' => 'layout',
+        'icon' => 'welcome-write-blog',
+        'mode' => 'preview',
+    ]);
+    acf_register_block([
+        'name' => 'contactinfo',
+        'title' => 'Kontakt information',
+        'render_template' => __DIR__ . '/partials/contact_info/contact_info.php',
         'category' => 'layout',
         'icon' => 'welcome-write-blog',
         'mode' => 'preview',

@@ -1,0 +1,121 @@
+section.contact_info {
+
+  div.container {
+    article.body {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      @media(max-width: 1150px) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      div.text {
+        @media(min-width: 1151px) {
+          margin-top: -200px;
+        }
+
+
+        line-height: 1;
+        writing-mode: vertical-lr;
+        max-height: 75%;
+        text-align: left;
+        @media(max-width: 1150px) {
+          writing-mode: initial;
+          max-height: 100%;
+          max-width: 60%;
+          text-align: center;
+          margin-bottom: 50px;
+        }
+        @media(max-width: 769px) {
+          max-width: 100%;
+        }
+
+        h2 {
+          @media(min-width: 1151px) {
+            text-shadow: 2px 3px 5px rgba(46, 46, 46, .4);
+          }
+
+          font-size: 100px;
+          font-weight: 900;
+          margin: 0;
+          color: $primary-color;
+
+          @media(max-width: 769px) {
+            font-size: 60px;
+          }
+
+        }
+      }
+
+      div.content {
+        width: 100%;
+        margin: 40px 0;
+        @media(min-width: 1151px) {
+          margin: 75px 0;
+          width: 50%;
+
+        }
+
+        div.singles {
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+
+          div.single {
+
+            border-top: 1px solid black;
+            flex-basis: calc(50% - 75px);
+
+
+            padding-top: 20px;
+            margin: 0 0 40px 0;
+            @media(min-width: 1151px) {
+              padding-top: 50px;
+              margin-bottom: 100px;
+            }
+
+            &:nth-child(odd) {
+              margin-right: 75px;
+            }
+
+            @media(max-width: 650px) {
+              flex-basis: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              flex-direction: column;
+              &:nth-child(odd) {
+                margin-right: 0;
+              }
+
+            }
+
+            h3 {
+              font-size: 26px;
+              margin: 0 0 15px 0;
+            }
+
+            p {
+              font-size: 20px;
+
+              a {
+                padding-bottom: 15px;
+
+                &:hover {
+                  border-bottom: 1px solid $primary-color;
+                }
+              }
+            }
+
+            a {
+              text-decoration: none
+            }
+          }
+        }
+      }
+    }
+  }
+}

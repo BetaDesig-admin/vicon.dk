@@ -2,10 +2,15 @@
 
 
 $bigFooter = false;
+$showFooter = get_field('show_contact_form', get_the_ID());
 if (is_front_page()) {
     $banner = get_field('footer_image', 'options')['url'];
     $bigFooter = true;
+}
 
+$makeSpacing = '';
+if (!$bigFooter && $showFooter) {
+    $makeSpacing = 'makeSpacing';
 }
 
 $email = get_field('infoemail', 'options');
@@ -21,19 +26,20 @@ $city = get_field('city', 'options');
 $address = $street . ', ' . $zip . ' ' . $city;
 
 $message = get_field('message');
+
 ?>
 
-<footer>
+<footer class="<?= $makeSpacing ?>">
 
     <?php if ($bigFooter) { ?>
-        <div class="image" >
+        <div class="image">
             <img src="<?= $banner ?>" alt="">
         </div>
     <?php } ?>
 
     <div class="container">
 
-        <?php if ($bigFooter) { ?>
+        <?php if ($bigFooter || $showFooter) { ?>
             <section class="form">
                 <div class="text">
                     <h2>Hvad kan vi gøre for dig?</h2>
