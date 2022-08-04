@@ -12,7 +12,9 @@
 }
 
 
-
+.editor-styles-wrapper{
+  background-color: $secoundary-color;
+}
 body:not(.wp-admin),
 .acf-block-preview {
   background-color: $secoundary-color;
@@ -91,3 +93,4 @@ body:not(.wp-admin),
 @import "../gutenberg/partials/banner/banner";
 @import "../gutenberg/partials/application/application";
 @import "../gutenberg/partials/contact_info/contact_info";
+@import "../gutenberg/partials/icon_nav/icon_nav";

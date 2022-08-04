@@ -31,16 +31,17 @@ if ($is_preview) {
     }
 }
 
-
 ?>
 
 <section class="two_column <?= $order ?>">
     <div class="container">
-        <div class="image <?= $textOrder ?>">
-            <img src="<?= $image['url'] ?>" alt=""/>
-        </div>
-        <div class="textContent">
-            <?= $text ?>
+        <div class="content">
+            <div class="image <?= $textOrder ?>">
+                <img src="<?= $image['url'] ?>" alt=""/>
+            </div>
+            <div class="textContent">
+                <?= $text ?>
+            </div>
         </div>
     </div>
 </section>

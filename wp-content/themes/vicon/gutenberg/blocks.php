@@ -4,7 +4,7 @@ function allow_blocks($blocks, $post)
 {
 
     $blocks = [
-        'acf/twocolumn', 'acf/text', 'acf/banner','acf/application', 'acf/contactinfo'
+        'acf/twocolumn', 'acf/text', 'acf/banner','acf/application', 'acf/contactinfo', 'acf/navinfo', 'acf/logoslider',
     ];
 
     return $blocks;
@@ -52,6 +52,22 @@ function register_blocks()
         'name' => 'contactinfo',
         'title' => 'Kontakt information',
         'render_template' => __DIR__ . '/partials/contact_info/contact_info.php',
+        'category' => 'layout',
+        'icon' => 'welcome-write-blog',
+        'mode' => 'preview',
+    ]);
+    acf_register_block([
+        'name' => 'navinfo',
+        'title' => 'Ydelser',
+        'render_template' => __DIR__ . '/partials/icon_nav/icon_nav.php',
+        'category' => 'layout',
+        'icon' => 'welcome-write-blog',
+        'mode' => 'preview',
+    ]);
+    acf_register_block([
+        'name' => 'logoslider',
+        'title' => 'Samarbejdespartnere',
+        'render_template' => __DIR__ . '/partials/logo_slider/logo_slider.php',
         'category' => 'layout',
         'icon' => 'welcome-write-blog',
         'mode' => 'preview',

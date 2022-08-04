@@ -1,4 +1,5 @@
 <?php
+$heading = get_field('heading');
 $email = get_field('infoemail', 'options');
 $phone = get_field('phone', 'options');
 $facebook = get_field('facebook', 'options');
@@ -13,9 +14,11 @@ $address = $street . ', ' . $zip . ' ' . $city;
 <section class="contact_info">
     <div class="container">
         <article class="body">
-            <div class="text">
-                <h2>Du finder os her</h2>
-            </div>
+            <?php if ($heading) { ?>
+                <div class="text">
+                    <h2><?= $heading ?></h2>
+                </div>
+            <?php } ?>
             <div class="content">
                 <div class="singles">
                     <div class="single location">
