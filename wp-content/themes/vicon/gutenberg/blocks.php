@@ -4,7 +4,7 @@ function allow_blocks($blocks, $post)
 {
 
     $blocks = [
-        'acf/twocolumn', 'acf/text', 'acf/banner','acf/application', 'acf/contactinfo', 'acf/navinfo', 'acf/logoslider',
+        'acf/twocolumn', 'acf/text', 'acf/banner', 'acf/application', 'acf/contactinfo', 'acf/services', 'acf/logoslider', 'acf/process'
     ];
 
     return $blocks;
@@ -57,17 +57,26 @@ function register_blocks()
         'mode' => 'preview',
     ]);
     acf_register_block([
-        'name' => 'navinfo',
+        'name' => 'logoslider',
+        'title' => 'Virksomheder',
+        'render_template' => __DIR__ . '/partials/logo_slider/logo_slider.php',
+        'category' => 'layout',
+        'icon' => 'welcome-write-blog',
+        'mode' => 'preview',
+    ]);
+
+    acf_register_block([
+        'name' => 'services',
         'title' => 'Ydelser',
-        'render_template' => __DIR__ . '/partials/icon_nav/icon_nav.php',
+        'render_template' => __DIR__ . '/partials/services/services.php',
         'category' => 'layout',
         'icon' => 'welcome-write-blog',
         'mode' => 'preview',
     ]);
     acf_register_block([
-        'name' => 'logoslider',
-        'title' => 'Samarbejdespartnere',
-        'render_template' => __DIR__ . '/partials/logo_slider/logo_slider.php',
+        'name' => 'process',
+        'title' => 'Processen',
+        'render_template' => __DIR__ . '/partials/process/process.php',
         'category' => 'layout',
         'icon' => 'welcome-write-blog',
         'mode' => 'preview',

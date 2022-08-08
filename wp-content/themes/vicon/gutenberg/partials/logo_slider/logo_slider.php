@@ -1,19 +1,19 @@
 <?php
-$mode = get_field('mode');
+$mode = get_field('layout');
 $args = array(
-    'post_type' => 'forhandlere',
+    'post_type' => 'company',
     'post_status' => 'publish',
     'posts_per_page' => -1,
 );
 
 if ($mode === 'single') {
-    $singles = get_field('single');
+    $singles = get_field('singles');
     $args['post__in'] = $singles;
 }
 $loop = new WP_Query($args);
 ?>
 
-    <section class="reseller_slider">
+    <section class="companys">
         <div class="container swiper reseller">
             <div class="swiper-wrapper">
                 <?php while ($loop->have_posts()) : $loop->the_post();
@@ -23,7 +23,7 @@ $loop = new WP_Query($args);
                     $active = get_field('active', $postID);
 
 
-                    if ($active) {
+                    if ($active === 'active') {
                         ?>
                         <div class="single swiper-slide">
                             <img src="<?= $logo['url'] ?>" alt="logo">
