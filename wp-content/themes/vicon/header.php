@@ -32,9 +32,7 @@ if (!sg_first_block_is('acf/banner')) {
         <section class="logo">
             <a href="<?php echo home_url(); ?>">
                 <div class="white">
-                    <?php
-                    echo file_get_contents(get_template_directory() . "/images/logo/Vicon_logo.svg");
-                    ?>
+                    <?= file_get_contents(get_template_directory() . "/images/logo/Vicon_logo.svg"); ?>
                 </div>
             </a>
         </section>
