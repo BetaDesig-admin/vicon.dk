@@ -1,7 +1,19 @@
 section.companys {
-  padding: 50px 0;
+
+  background-color: $primary-color;
+  padding: 300px 0;
 
   div.container.swiper {
+    div.heading {
+      margin-bottom: 200px;
+
+      h1, h2, h3, h4, h5, h6 {
+        font-weight: bold;
+        max-width: 60%;
+        color: $white-color;
+      }
+    }
+
     div.swiper-wrapper {
 
       //@media(min-width: 1024px) {
@@ -27,6 +39,24 @@ section.companys {
   }
 }
 
+section.companyImage {
+  background-color: $white-color;
+
+
+  div.container {
+    display: flex;
+    justify-content: flex-end;
+
+    img {
+      margin-top: -100px;
+      margin-bottom: 200px;
+      max-width: 100%;
+      object-fit: cover;
+      max-height: 100%;
+    }
+  }
+}
+
 .acf-block-preview {
   section.reseller_slider {
     div.container {
@@ -47,3 +77,4 @@ section.companys {
     }
   }
 }
+

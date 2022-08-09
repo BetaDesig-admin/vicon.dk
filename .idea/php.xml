@@ -3,6 +3,7 @@
   <component name="PhpIncludePathManager">
     <include_path>
       <path value="$USER_HOME$/Desktop/Projects/wordpress" />
+      <path value="$USER_HOME$/Downloads/wordpress" />
     </include_path>
   </component>
 </project>

@@ -1,5 +1,7 @@
 <?php
 $mode = get_field('layout');
+$image = get_field('image');
+$heading = get_field('heading');
 $args = array(
     'post_type' => 'company',
     'post_status' => 'publish',
@@ -15,6 +17,9 @@ $loop = new WP_Query($args);
 
     <section class="companys">
         <div class="container swiper reseller">
+            <div class="heading">
+                <?= $heading ?>
+            </div>
             <div class="swiper-wrapper">
                 <?php while ($loop->have_posts()) : $loop->the_post();
                     $postID = get_the_ID();
@@ -36,22 +41,27 @@ $loop = new WP_Query($args);
             </div>
         </div>
     </section>
+    <section class="companyImage">
+        <div class="container">
+            <img src="<?= $image['url'] ?>" alt="">
+        </div>
+    </section>
 
     <script>
         const swiper = new Swiper('.swiper.container.reseller', {
             direction: 'horizontal',
             loop: true,
-            centeredSlides: true,
+            //centeredSlides: true,
             autoplay: {
-                delay: 3500,
+                delay: 2500,
             },
             breakpoints: {
                 // when window width is >= 320px
                 1024: {
-                    slidesPerView: 4,
+                    slidesPerView: 5,
                 },
                 650: {
-                    slidesPerView: 3,
+                    slidesPerView: 4,
                 },
                 450: {
                     slidesPerView: 2,
