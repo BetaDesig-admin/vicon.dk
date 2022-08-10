@@ -9,23 +9,18 @@ section.application {
 
     div.heading {
 
-      margin-top: -400px;
-      @media(max-width: 1450px) {
-        margin-top: -350px;
-      }
-      @media(max-width: 1150px) {
-        margin-top: -300px;
-      }
-      @media(max-width: 769px) {
-        margin-top: 100px;
-      }
 
       flex-basis: calc(35% - 50px);
 
+      @media(min-width: 1151px) {
+        margin-top: -300px;
+      }
+
+
       line-height: 1;
       writing-mode: vertical-lr;
-      max-height: 55%;
-      text-align: right;
+      max-height: 70%;
+      text-align: left;
       @media(max-width: 1150px) {
         writing-mode: initial;
         max-height: 100%;
@@ -35,15 +30,18 @@ section.application {
       }
       @media(max-width: 769px) {
         max-width: 100%;
-        margin-bottom: 100px;
       }
 
       h2 {
-        text-shadow: 2px 3px 5px rgba(46, 46, 46, .4);
+        @media(min-width: 1151px) {
+          text-shadow: 1px 0px 1px rgba(46, 46, 46, .4);
+        }
+
         font-size: 100px;
         font-weight: 900;
         margin: 0;
         color: $primary-color;
+
         @media(max-width: 769px) {
           font-size: 60px;
         }

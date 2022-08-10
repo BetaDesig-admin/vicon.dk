@@ -31,7 +31,7 @@ $i = 1;
                     $desc = get_field('desc', get_the_ID());
                     ?>
                     <div class="single">
-                        <a href="#">
+                        <a href="<?= get_post_type_archive_link('process')?>">
                             <div class="num">
                                 0<?= $i ?>
                             </div>
@@ -54,7 +54,7 @@ $i = 1;
                 ?>
 
             </article>
-            <a href="#" class="more">Se alle processor
+            <a href="<?= get_post_type_archive_link('process')?>" class="more">Se alle processor
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40"
                      height="40" viewBox="0 0 40 40">
                     <image id="icons8-right-50" width="40" height="40"

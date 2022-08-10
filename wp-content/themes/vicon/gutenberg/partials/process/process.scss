@@ -1,6 +1,14 @@
 section.process {
   div.container {
     padding: 200px 0;
+
+    @media(max-width: 1150px) {
+      padding: 100px 20px;
+    }
+    @media(max-width: 650px) {
+      padding: 25px 20px 100px;
+    }
+
     article.body {
 
       display: flex;
@@ -9,14 +17,24 @@ section.process {
       @media(max-width: 1150px) {
         //flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
       }
-
 
       > div {
         flex-basis: calc(33.33% - 75px);
         margin-right: 75px;
         margin-bottom: 90px;
+
+        @media(max-width: 1150px) {
+          flex-basis: calc(50% - 50px);
+          margin-right: 50px;
+          margin-bottom: 50px;
+        }
+
+        @media(max-width: 650px) {
+          flex-basis: 100%;
+          margin-right: 0;
+        }
 
         &.single {
           padding-top: 45px;
@@ -31,7 +49,7 @@ section.process {
               margin: 0 0 25px 0;
             }
 
-            div.num{
+            div.num {
               font-size: 80px;
               font-family: $heading-font;
               font-weight: bold;
@@ -83,10 +101,24 @@ section.process {
 
         &:nth-of-type(5) {
           margin-right: calc(33.33% + 75px);
+
+          @media(max-width: 1150px) {
+            margin-right: 50px;
+          }
+          @media(max-width: 650px) {
+            margin-right: 0;
+          }
         }
 
         &:nth-of-type(6) {
           margin-left: 33.33%;
+
+          @media(max-width: 1150px) {
+            margin-left: 0;
+          }
+          @media(max-width: 650px) {
+            margin-left: 0;
+          }
         }
       }
 
@@ -98,7 +130,7 @@ section.process {
 
         line-height: 1;
         writing-mode: vertical-lr;
-        max-height: 50%;
+        max-height: 70%;
         text-align: left;
         @media(max-width: 1150px) {
           writing-mode: initial;
@@ -113,7 +145,7 @@ section.process {
 
         h2 {
           @media(min-width: 1151px) {
-            text-shadow: 2px 3px 5px rgba(46, 46, 46, .4);
+            text-shadow: 1px 0px 1px rgba(46, 46, 46, .4);
           }
 
           font-size: 100px;
@@ -154,12 +186,17 @@ section.process {
         margin-left: 40px;
       }
     }
+
+    @media(max-width: 650px) {
+      width: 100%;
+    }
   }
 }
 
 .acf-block-preview {
   section.icon_nav {
     padding: 25px 0 40px;
+
     div.container {
       article.body {
         div.text {

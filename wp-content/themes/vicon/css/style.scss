@@ -12,9 +12,10 @@
 }
 
 
-.editor-styles-wrapper{
+.editor-styles-wrapper {
   background-color: $secoundary-color;
 }
+
 body:not(.wp-admin),
 .acf-block-preview {
   background-color: $secoundary-color;
@@ -34,6 +35,7 @@ body:not(.wp-admin),
     margin: 0 auto;
     max-width: $container-width;
     width: 100%;
+    padding: 0 20px;
   }
 
   @media(max-width: $container-width + 40px) {
@@ -67,7 +69,7 @@ body:not(.wp-admin),
         z-index: 1;
       }
     }
-
+//
     h1 {
       z-index: 2;
 
@@ -86,8 +88,6 @@ body:not(.wp-admin),
   }
 }
 
-
-//
 @import "../gutenberg/partials/two_column/two_column";
 @import "../gutenberg/partials/text_content/text_content";
 @import "../gutenberg/partials/banner/banner";

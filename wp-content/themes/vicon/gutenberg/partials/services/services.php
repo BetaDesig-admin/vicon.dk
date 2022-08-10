@@ -27,9 +27,10 @@ $loop = new WP_Query($args);
                 <?php while ($loop->have_posts()) : $loop->the_post();
                     $svg = get_field('icon', get_the_ID());
                     $desc = get_field('desc', get_the_ID());
+
                     ?>
                     <div class="single">
-                        <a href="#">
+                        <a href="<?= get_post_type_archive_link('services')?>">
                             <div class="svg">
                                 <?= file_get_contents(get_template_directory() . "/images/services/" . $svg . "_icon.svg"); ?>
                             </div>
@@ -51,7 +52,7 @@ $loop = new WP_Query($args);
                 wp_reset_postdata();
                 ?>
             </article>
-            <a href="#" class="more">Se alle ydelser
+            <a href="<?= get_post_type_archive_link('services')?>" class="more">Se alle ydelser
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40"
                      height="40" viewBox="0 0 40 40">
                     <image id="icons8-right-50" width="40" height="40"

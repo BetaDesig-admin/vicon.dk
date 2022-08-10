@@ -5,11 +5,12 @@ section.banner {
   }
 
   height: 80vh;
+  position: relative;
 
   div.image {
     z-index: -1;
     height: 80vh;
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
@@ -36,6 +37,10 @@ section.banner {
   }
 
   div.container {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -62,7 +67,7 @@ section.banner {
         font-family: $heading-font;
         font-weight: 900;
         line-height: 1;
-        text-shadow: 2px 3px 5px rgba(46, 46, 46, .4);
+        text-shadow: 1px 0px 1px rgba(46, 46, 46, .4);
       }
 
       h1 {

@@ -1,6 +1,11 @@
 <?php
-$image = get_field('image')['url'];
+if (!$image) {
+    $image = get_field('image')['url'];
+}
+if (!$text) {
 $text = get_field('text');
+}
+
 if ($is_preview) {
     if (!$image) {
         $image = 'https://via.placeholder.com/1920x1024/BC5D2E/EAEAEA?Text=Vicon.com';

@@ -30,11 +30,11 @@ if (!sg_first_block_is('acf/banner')) {
 <header id="header" class="<?= $headerColor ?>">
     <div class="container">
         <section class="logo">
-            <a href="<?php echo home_url(); ?>">
+            <!--<a href="<?php echo home_url(); ?>">
                 <div class="white">
-                    <?= file_get_contents(get_template_directory() . "/images/logo/Vicon_logo.svg"); ?>
+                    <?php //file_get_contents(get_template_directory() . "/images/logo/Vicon_logo.svg"); ?>
                 </div>
-            </a>
+            </a>-->
         </section>
         <label for="menuToggle">
             <span></span>
