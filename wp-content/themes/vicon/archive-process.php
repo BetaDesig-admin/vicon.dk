@@ -1,33 +1,38 @@
 <?php get_header();
 $text = get_field('process_text', 'options');
 $image = get_field('process_image', 'options')['url'];
+$heading = get_field('process_heading', 'options');
+require_once('gutenberg/partials/banner/banner.php')
 
-require_once ('gutenberg/partials/banner/banner.php')
 ?>
+    <section class="archive std process">
 
-    <section class="archive">
-        <div class="container">
+        <div class="single heading"><h1><?= $heading ?></h1></div>
+        <?php if (have_posts()):
+            $p = 1;
+            ?>
+            <?php while (have_posts()) : the_post();
+                $desc = get_field('desc');
 
-            <?php if (have_posts()): ?>
-                <?php while (have_posts()) : the_post(); ?>
-                    <h2>
-                        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                    </h2>
-                    <?php the_excerpt(); ?>
-                <?php endwhile;
-                wp_reset_query(); ?>
-            <?php else: ?>
-                <h2>No posts found</h2>
-            <?php endif; ?>
+                if ($p < 10) {
+                    $p = '0' . $p;
+                }
 
-            <?php if ($wp_query->max_num_pages > 1) : ?>
-                <div class="prev">
-                    <?php next_posts_link(__('&larr; Older posts')); ?>
+                ?>
+                <div class="single">
+                    <div class="num">
+                        <?= $p ?>
+                    </div>
+                    <div class="content">
+                        <h2><?php the_title(); ?></h2>
+                        <?= $desc ?>
+                    </div>
                 </div>
-                <div class="next">
-                    <?php previous_posts_link(__('Newer posts &rarr;')); ?>
-                </div>
-            <?php endif; ?>
-        </div>
+            <?php
+                $p++;
+            endwhile;
+            wp_reset_query(); ?>
+        <?php endif; ?>
+
     </section>
 <?php get_footer(); ?>
