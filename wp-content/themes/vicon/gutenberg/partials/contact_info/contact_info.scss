@@ -5,28 +5,31 @@ section.contact_info {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+      width: 100%;
       @media(max-width: 1150px) {
         flex-direction: column;
         align-items: center;
         justify-content: center;
       }
+      @media(max-width: 769px) {
+        padding: 0 25px;
+      }
 
       div.text {
-        @media(min-width: 1151px) {
-          margin-top: -200px;
-        }
-
-
         line-height: 1;
-        writing-mode: vertical-lr;
+        //writing-mode: vertical-lr;
         max-height: 75%;
         text-align: left;
+        transform: rotate(270deg);
+        max-width: 35%;
+        margin: -250px 0 200px 200px;
         @media(max-width: 1150px) {
-          writing-mode: initial;
+          //writing-mode: initial;
+          transform: rotate(0deg);
           max-height: 100%;
           max-width: 60%;
-          text-align: center;
-          margin-bottom: 50px;
+          text-align: left;
+          margin: 75px 0 50px 0;
         }
         @media(max-width: 769px) {
           max-width: 100%;
@@ -41,9 +44,11 @@ section.contact_info {
           font-weight: 900;
           margin: 0;
           color: $primary-color;
-
+          @media(max-width: 1150px) {
+            font-size: 75px;
+          }
           @media(max-width: 769px) {
-            font-size: 60px;
+            font-size: 50px;
           }
 
         }
@@ -51,7 +56,7 @@ section.contact_info {
 
       div.content {
         width: 100%;
-        margin: 40px 0;
+        margin: 40px 0 0 0;
         @media(min-width: 1151px) {
           margin: 75px 0;
           width: 50%;

@@ -39,11 +39,11 @@ $address = $street . ', ' . $zip . ' ' . $city;
                         <h3>Følg os</h3>
                         <div class="socials">
                             <?php if ($facebook) { ?>
-                                <a href="<?= $facebook ?>"><?= file_get_contents(get_template_directory() . "/images/SVG/facebook.svg"); ?></a>
+                                <a href="<?= $facebook ?>"><?= file_get_contents(get_template_directory() . "/images/SVG/facebook_black.svg"); ?></a>
                             <?php } ?>
 
                             <?php if ($linkedin) { ?>
-                                <a href="<?= $linkedin ?>"><?= file_get_contents(get_template_directory() . "/images/SVG/linkedin.svg"); ?></a>
+                                <a href="<?= $linkedin ?>"><?= file_get_contents(get_template_directory() . "/images/SVG/linkedin_black.svg"); ?></a>
                             <?php } ?>
                         </div>
                     </div>

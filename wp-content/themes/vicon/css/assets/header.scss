@@ -146,7 +146,7 @@ header {
         padding: 0 20px;
         position: absolute;
         left: 20px;
-        top: 20px;
+        top: 50px;
 
         span {
           display: block;
@@ -240,14 +240,6 @@ header {
               fill: $white-color;
             }
           }
-        }
-      }
-    }
-
-    &.banner {
-      label {
-        span {
-          background-color: lighten($primary-color, 10%) !important;
         }
       }
     }

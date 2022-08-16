@@ -9,7 +9,7 @@ section.companys {
     padding: 100px 0 !important;
   }
   @media(max-width: 650px) {
-    padding: 25px 0 !important;
+    padding: 130px 0 !important;
   }
 
   div.container.swiper {
@@ -21,6 +21,7 @@ section.companys {
       }
       @media(max-width: 650px) {
         margin-bottom: 25px;
+        padding: 0 20px;
       }
 
       h1, h2, h3, h4, h5, h6 {
@@ -68,18 +69,23 @@ section.companyImage {
     justify-content: flex-end;
 
     img {
-
+      padding: 0 20px;
       max-width: 100%;
       object-fit: cover;
       max-height: 100%;
-
-      margin: 20px 0;
+      margin-top: -50px;
+      margin-bottom: 100px;
       @media(min-width: 1651px) {
         margin-top: -100px;
         margin-bottom: 200px;
       }
       @media(max-width: 1450px){
-        width: 100%;
+        //width: 100%;
+      }
+      @media(max-width: 650px) {
+        margin-top: -60px;
+        margin-bottom: 100px;
+        height: calc(100vw - 100px)
       }
 
     }

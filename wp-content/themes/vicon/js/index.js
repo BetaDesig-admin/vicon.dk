@@ -180,7 +180,14 @@ setTimeout(function () {
         });
     }
 
+    const menu = document.getElementById('menuToggle');
+    menu.addEventListener('change', () => {
+        const isOpen = menu.checked;
+        if (isOpen) {
+            document.querySelector('body').classList.add('fixed');
+        } else {
+            document.querySelector('body').classList.remove('fixed');
+        }
+    })
+
 }, 100);
-
-
-
