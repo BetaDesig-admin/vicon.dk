@@ -29,7 +29,7 @@ body:not(.wp-admin),
   }
 
   margin: 0;
-
+//
 
   @import "assets/header";
   @import "assets/footer";
@@ -58,7 +58,7 @@ body:not(.wp-admin),
   h1, h2, h3, h4, h5, h6 {
     font-family: $heading-font;
     font-weight: 600;
-    color: inherit;
+    color: $black-color;
   }
 
   .page_not_found {

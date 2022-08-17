@@ -40,7 +40,7 @@ $message = get_field('message');
     <div class="container">
 
         <?php if ($bigFooter || $showFooter) {
-            $contactText = get_field('contact_text', 'options');
+            $contactText = get_field('contact_form_text', get_the_ID());
             ?>
             <section class="form">
                 <div class="text">

@@ -81,6 +81,7 @@ section.banner {
 
       h1 {
         font-size: 80px;
+        color: $white-color;
 
         @media(min-width: 1650px) {
           font-size: 100px;

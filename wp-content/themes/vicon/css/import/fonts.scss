@@ -1,7 +1,7 @@
 h1, h2, h3, h4, h5, h6 {
   font-family: $heading-font;
   font-weight: 600;
-  color: inherit;
+  color: $black-color;
 }
 
 h1 {
@@ -80,7 +80,7 @@ a {
 }
 
 p, li, span {
-  color: inherit;
+  color: $black-color;
   font-family: $regular-font;
   font-size: 14px;
   font-weight: 300;
