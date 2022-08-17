@@ -10,7 +10,14 @@ footer {
   &.makeSpacing {
     @media(min-width: 1151px) {
       margin-top: 300px;
+      .form:first-of-type {
+        margin-top: -530px;
+        .text {
+          color: $primary-color;
+        }
+      }
     }
+
   }
 
   div.image {
@@ -242,7 +249,7 @@ footer {
           font-weight: 900;
           margin: 0 0 15px 0;
           @media(max-width: 650px) {
-            font-size: 35px;
+            font-size: 32px;
           }
         }
 

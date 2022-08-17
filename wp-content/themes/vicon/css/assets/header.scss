@@ -59,7 +59,9 @@ header {
               font-size: 18px;
               font-family: $regular-font;
               text-shadow: 1px 0px 1px rgba(46, 46, 46, .4);
-
+              @media(max-width: 1025px) {
+                font-size: 22px;
+              }
               &:hover {
                 border-bottom: 1px solid $primary-color;
                 position: relative;

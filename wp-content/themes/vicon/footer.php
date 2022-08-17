@@ -39,10 +39,12 @@ $message = get_field('message');
 
     <div class="container">
 
-        <?php if ($bigFooter || $showFooter) { ?>
+        <?php if ($bigFooter || $showFooter) {
+            $contactText = get_field('contact_text', 'options');
+            ?>
             <section class="form">
                 <div class="text">
-                    <h2>Hvad kan vi gøre for dig?</h2>
+                    <h2><?= $contactText ?></h2>
                 </div>
                 <div class="form">
                     <?= do_shortcode('[contact-form-7 id="59" title="Footer"]') ?>
