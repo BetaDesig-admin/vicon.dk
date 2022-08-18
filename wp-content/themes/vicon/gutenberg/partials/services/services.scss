@@ -171,6 +171,9 @@ section.services {
     svg {
       margin-left: 20px;
       transition: .2s ease-in-out margin-left;
+      @media(max-width: 650px) {
+        transform: scale(1.5);
+      }
     }
 
     &:hover {
