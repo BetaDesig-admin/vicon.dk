@@ -8,10 +8,10 @@ section.two_column {
     padding: 100px 0;
   }
   @media(max-width: 1024px) {
-
+    padding: 50px 0;
   }
   @media(max-width: 769px) {
-    padding: 25px 0;
+    padding: 50px 0;
   }
   @media(max-width: 650px) {
     padding: 80px 25px;
@@ -22,6 +22,7 @@ section.two_column {
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-between;
+      align-items: flex-end;
 
       > div {
         flex-basis: calc(50% - 90px);
@@ -46,29 +47,26 @@ section.two_column {
       &.first {
         order: 1;
       }
-      @media(min-width: 1025px) {
-        margin-top: 200px;
-        margin-bottom: -300px;
+      @media(min-width: 1151px) {
+        margin-bottom: -250px;
+      }
+      @media(max-width: 1150px) {
+        margin-bottom: -150px;
       }
       @media(max-width: 1024px) {
-        margin-top: 140px;
         margin-bottom: -180px;
       }
-      @media(max-width: 769px) {
-        margin-top: 110px;
+      @media(max-width: 950px) {
+        margin-bottom: -100px;
       }
-      @media(max-width: 700px) {
-        margin-top: 180px;
-      }
+
       @media(max-width: 650px) {
-        margin-top: 100px;
         margin-bottom: -140px;
       }
 
       img {
         z-index: 4;
         width: 100%;
-        //height: 100%;
         object-fit: cover;
         display: block;
       }
@@ -148,5 +146,5 @@ section.two_column {
 }
 
 section.two_column + section {
-  padding-top: 300px;
+  padding-top: 200px;
 }
