@@ -128,7 +128,7 @@ section.services {
             margin-left: 33.33%;
 
             @media(max-width: 1150px) {
-              margin-left: 0;
+              margin-left: unset;
             }
           }
 
@@ -140,7 +140,7 @@ section.services {
             margin-left: 33.33%;
 
             @media(max-width: 1150px) {
-              margin-left: 0;
+              margin-left: unset;
             }
           }
         }
