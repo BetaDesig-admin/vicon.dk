@@ -168,15 +168,29 @@ section.archive {
   &.process {
     div.single {
       position: relative;
-      background-color: $secoundary-color;
-      &:nth-child(even) {
+      @media(min-width: 1025px) {
         background-color: $white-color;
+        div.num {
           background-color: $secoundary-color;
+        }
+        &:nth-child(4n + 2), &:nth-child(4n + 3) {
+          background-color: $secoundary-color;
+          div.num {
+            background-color: $white-color;
+          }
+        }
       }
-
-      &:nth-child(odd) {
-          background-color: $white-color;
-          color: $black-color;
+      @media(max-width: 1024px) {
+        background-color: $white-color;
+        div.num {
+          background-color: $secoundary-color;
+        }
+        &:nth-child(even) {
+          background-color: $secoundary-color;
+          div.num {
+            background-color: $white-color;
+          }
+        }
       }
       div.num {
         width: 100px;
@@ -193,20 +207,10 @@ section.archive {
         top: 0;
         left: 0;
         z-index: 2;
-        &:nth-child(even) {
-            background-color: $secoundary-color;
-        }
-        &:nth-child(odd) {
-            background-color: $white-color;
-            color: $black-color;
-        }
       }
-
-
-
+      div.content {
+        padding-top: 60px;
+      }
     }
-
   }
-
-
 }
