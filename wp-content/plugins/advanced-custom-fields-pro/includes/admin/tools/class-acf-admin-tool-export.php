@@ -102,7 +102,7 @@ class ACF_Admin_Tool_Export extends ACF_Admin_Tool {
 		$file_name = 'acf-export-' . date('Y-m-d') . '.json';
 		header( "Content-Description: File Transfer" );
 		header( "Content-Disposition: attachment; filename={$file_name}" );
-		header( "Content-Type: application/json; charset=utf-8" );
+		header( "Content-Type: application_old/json; charset=utf-8" );
 		
 		
 		// return

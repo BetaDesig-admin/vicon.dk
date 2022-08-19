@@ -55,7 +55,7 @@ class WPCF7_Stripe_API {
 		$ua = array(
 			'lang' => 'php',
 			'lang_version' => PHP_VERSION,
-			'application' => $app_info,
+			'application_old' => $app_info,
 		);
 
 		$headers = array(

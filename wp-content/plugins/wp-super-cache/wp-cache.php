@@ -3349,7 +3349,7 @@ function wp_cache_check_site() {
 	$front_page = wp_remote_get( site_url(), array('timeout' => 60, 'blocking' => true ) );
 	if( is_array( $front_page ) ) {
 		// Check for gzipped front page
-		if ( $front_page[ 'headers' ][ 'content-type' ] == 'application/x-gzip' ) {
+		if ( $front_page[ 'headers' ][ 'content-type' ] == 'application_old/x-gzip' ) {
 			if ( !isset( $wp_super_cache_front_page_clear ) || ( isset( $wp_super_cache_front_page_clear ) && $wp_super_cache_front_page_clear == 0 ) ) {
 				wp_mail( get_option( 'admin_email' ), sprintf( __( '[%s] Front page is gzipped! Please clear cache!', 'wp-super-cache' ), home_url() ), sprintf( __( "Please visit %s to clear the cache as the front page of your site is now downloading!", 'wp-super-cache' ), admin_url( 'options-general.php?page=wpsupercache' ) ) );
 			} else {

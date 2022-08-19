@@ -226,8 +226,8 @@ trait WPCF7_Sendinblue_API {
 
 		$request = array(
 			'headers' => array(
-				'Accept' => 'application/json',
-				'Content-Type' => 'application/json; charset=utf-8',
+				'Accept' => 'application_old/json',
+				'Content-Type' => 'application_old/json; charset=utf-8',
 				'API-Key' => $this->get_api_key(),
 			),
 		);
@@ -258,8 +258,8 @@ trait WPCF7_Sendinblue_API {
 
 		$request = array(
 			'headers' => array(
-				'Accept' => 'application/json',
-				'Content-Type' => 'application/json; charset=utf-8',
+				'Accept' => 'application_old/json',
+				'Content-Type' => 'application_old/json; charset=utf-8',
 				'API-Key' => $this->get_api_key(),
 			),
 		);
@@ -296,8 +296,8 @@ trait WPCF7_Sendinblue_API {
 
 		$request = array(
 			'headers' => array(
-				'Accept' => 'application/json',
-				'Content-Type' => 'application/json; charset=utf-8',
+				'Accept' => 'application_old/json',
+				'Content-Type' => 'application_old/json; charset=utf-8',
 				'API-Key' => $this->get_api_key(),
 			),
 		);
@@ -327,8 +327,8 @@ trait WPCF7_Sendinblue_API {
 
 		$request = array(
 			'headers' => array(
-				'Accept' => 'application/json',
-				'Content-Type' => 'application/json; charset=utf-8',
+				'Accept' => 'application_old/json',
+				'Content-Type' => 'application_old/json; charset=utf-8',
 				'API-Key' => $this->get_api_key(),
 			),
 			'body' => json_encode( $properties ),
@@ -355,8 +355,8 @@ trait WPCF7_Sendinblue_API {
 
 		$request = array(
 			'headers' => array(
-				'Accept' => 'application/json',
-				'Content-Type' => 'application/json; charset=utf-8',
+				'Accept' => 'application_old/json',
+				'Content-Type' => 'application_old/json; charset=utf-8',
 				'API-Key' => $this->get_api_key(),
 			),
 			'body' => json_encode( $properties ),

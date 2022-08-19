@@ -531,7 +531,7 @@ class Compiler
 
                 switch ($this->sourceMap) {
                     case self::SOURCE_MAP_INLINE:
-                        $sourceMapUrl = sprintf('data:application/json,%s', Util::encodeURIComponent($sourceMap));
+                        $sourceMapUrl = sprintf('data:application_old/json,%s', Util::encodeURIComponent($sourceMap));
                         break;
 
                     case self::SOURCE_MAP_FILE:

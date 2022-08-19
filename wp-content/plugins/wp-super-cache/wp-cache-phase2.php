@@ -2645,15 +2645,15 @@ function wp_cache_shutdown_callback() {
 				$type = str_replace('/','',$type);
 				switch ($type) {
 					case 'atom':
-						$value = 'application/atom+xml';
+						$value = 'application_old/atom+xml';
 						break;
 					case 'rdf':
-						$value = 'application/rdf+xml';
+						$value = 'application_old/rdf+xml';
 						break;
 					case 'rss':
 					case 'rss2':
 					default:
-						$value = 'application/rss+xml';
+						$value = 'application_old/rss+xml';
 				}
 			}
 			$is_feed = true;
@@ -2665,7 +2665,7 @@ function wp_cache_shutdown_callback() {
 
 			wp_cache_debug( "wp_cache_shutdown_callback: feed is type: $type - $value" );
 		} elseif ( isset( $wp_super_cache_query[ 'is_rest' ] ) ) { // json
-			$value = 'application/json';
+			$value = 'application_old/json';
 		} else { // not a feed
 			$value = get_option( 'html_type' );
 			if( $value == '' )

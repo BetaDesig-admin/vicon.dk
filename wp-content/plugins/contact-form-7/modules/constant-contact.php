@@ -336,8 +336,8 @@ class WPCF7_ConstantContact extends WPCF7_Service_OAuth2 {
 		$request = array(
 			'method' => 'GET',
 			'headers' => array(
-				'Accept' => 'application/json',
-				'Content-Type' => 'application/json; charset=utf-8',
+				'Accept' => 'application_old/json',
+				'Content-Type' => 'application_old/json; charset=utf-8',
 			),
 		);
 
@@ -368,8 +368,8 @@ class WPCF7_ConstantContact extends WPCF7_Service_OAuth2 {
 		$request = array(
 			'method' => 'POST',
 			'headers' => array(
-				'Accept' => 'application/json',
-				'Content-Type' => 'application/json; charset=utf-8',
+				'Accept' => 'application_old/json',
+				'Content-Type' => 'application_old/json; charset=utf-8',
 			),
 			'body' => json_encode( $properties ),
 		);
@@ -391,8 +391,8 @@ class WPCF7_ConstantContact extends WPCF7_Service_OAuth2 {
 		$request = array(
 			'method' => 'GET',
 			'headers' => array(
-				'Accept' => 'application/json',
-				'Content-Type' => 'application/json; charset=utf-8',
+				'Accept' => 'application_old/json',
+				'Content-Type' => 'application_old/json; charset=utf-8',
 			),
 		);
 

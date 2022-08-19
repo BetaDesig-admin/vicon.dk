@@ -341,7 +341,7 @@ function wpcf7_enctype_value( $enctype ) {
 	}
 
 	$valid_enctypes = array(
-		'application/x-www-form-urlencoded',
+		'application_old/x-www-form-urlencoded',
 		'multipart/form-data',
 		'text/plain',
 	);

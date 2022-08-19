@@ -4,7 +4,7 @@ function allow_blocks($blocks, $post)
 {
 
     $blocks = [
-        'acf/twocolumn', 'acf/text', 'acf/banner', 'acf/application', 'acf/contactinfo', 'acf/services', 'acf/logoslider', 'acf/process'
+        'acf/twocolumn', 'acf/text', 'acf/banner', 'acf/contactinfo', 'acf/services', 'acf/logoslider', 'acf/process', 'acf/application', 'acf/joblist'
     ];
 
     return $blocks;
@@ -36,14 +36,6 @@ function register_blocks()
         'name' => 'banner',
         'title' => 'Banner',
         'render_template' => __DIR__ . '/partials/banner/banner.php',
-        'category' => 'layout',
-        'icon' => 'welcome-write-blog',
-        'mode' => 'preview',
-    ]);
-    acf_register_block([
-        'name' => 'application',
-        'title' => 'Indsend CV',
-        'render_template' => __DIR__ . '/partials/application/application.php',
         'category' => 'layout',
         'icon' => 'welcome-write-blog',
         'mode' => 'preview',
@@ -81,6 +73,22 @@ function register_blocks()
         'icon' => 'welcome-write-blog',
         'mode' => 'preview',
     ]);
+	acf_register_block([
+		'name' => 'application',
+		'title' => 'Uopfordret ansøgning',
+		'render_template' => __DIR__ . '/partials/application/application.php',
+		'category' => 'layout',
+		'icon' => 'welcome-write-blog',
+		'mode' => 'preview',
+	]);
+	acf_register_block([
+		'name' => 'joblist',
+		'title' => 'Jobliste',
+		'render_template' => __DIR__ . '/partials/joblist/joblist.php',
+		'category' => 'layout',
+		'icon' => 'welcome-write-blog',
+		'mode' => 'preview',
+	]);
 }
 
 add_action('acf/init', 'register_blocks');
