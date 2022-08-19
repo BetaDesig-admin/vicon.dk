@@ -79,8 +79,5 @@ $loop = new WP_Query( $args );
                 },
             }
         });
-        if (screen.width > 1150) {
-            serviceSwiper.destroy(false, true);
-        }
     </script>
 <?php

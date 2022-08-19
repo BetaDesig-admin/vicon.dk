@@ -72,8 +72,5 @@ $i = 1;
                 },
             }
         });
-        if (screen.width > 1150) {
-            serviceSwiper.destroy(false, true);
-        }
     </script>
 <?php

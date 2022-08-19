@@ -8,6 +8,7 @@ section.archive {
     div.single {
       flex-basis: 50%;
       padding: 230px;
+
       @media(max-width: 1620px) {
         padding: 165px;
       }
@@ -20,14 +21,6 @@ section.archive {
       @media(max-width: 769px) {
         padding: 100px 50px;
       }
-
-      svg {
-        height: 115px;
-        @media(max-width: 1024px) {
-          height: 95px;
-        }
-      }
-
       &:nth-child(2) {
         margin-top: -100px;
         @media(max-width: 1024px) {
@@ -35,36 +28,6 @@ section.archive {
         }
       }
 
-      &:nth-child(4n + 2) {
-        background-color: $secoundary-color;
-        color: $black-color;
-      }
-
-      &:nth-child(4n + 3) {
-        background-color: $primary-color;
-        color: $white-color;
-        h2, p {
-          color: $white-color;
-        }
-      }
-      &:last-child(2) {
-        margin-bottom: -100px;
-        @media(max-width: 1024px) {
-          margin-bottom: unset;
-        }
-      }
-      @media(max-width: 1024px) {
-        &:nth-child(odd) {
-          background-color: $white-color;
-          h2, p {
-            color: $black-color;
-          }
-        }
-        &:nth-child(even) {
-          background-color: $secoundary-color;
-          color: $black-color;
-        }
-      }
 
       h2 {
         margin-bottom: 15px;
@@ -160,16 +123,61 @@ section.archive {
   }
 
   &.services {
-    div.svg {
-      margin-bottom: 80px;
+    div.single {
+      svg {
+        height: 115px;
+        @media(max-width: 1024px) {
+          height: 95px;
+        }
+      }
+
+      &:nth-child(4n + 2) {
+        background-color: $secoundary-color;
+        color: $black-color;
+      }
+
+      &:nth-child(4n + 3) {
+        background-color: $primary-color;
+        color: $white-color;
+        @media(max-width: 1024px) {
+          color: $black-color;
+        }
+        h2, p {
+          color: $white-color;
+        }
+      }
+
+      @media(max-width: 1024px) {
+        &:nth-child(odd) {
+          background-color: $white-color;
+          h2, p {
+            color: $black-color;
+          }
+        }
+        &:nth-child(even) {
+          background-color: $secoundary-color;
+          color: $black-color;
+        }
+      }
+      div.svg {
+        margin-bottom: 80px;
+      }
     }
   }
 
   &.process {
-
     div.single {
       position: relative;
+      background-color: $secoundary-color;
+      &:nth-child(even) {
+        background-color: $white-color;
+          background-color: $secoundary-color;
+      }
 
+      &:nth-child(odd) {
+          background-color: $white-color;
+          color: $black-color;
+      }
       div.num {
         width: 100px;
         height: 100px;
@@ -185,35 +193,17 @@ section.archive {
         top: 0;
         left: 0;
         z-index: 2;
-
-      }
-
-      &:nth-child(4n + 2) {
-        div.num {
-          background-color: $white-color;
+        &:nth-child(even) {
+            background-color: $secoundary-color;
+        }
+        &:nth-child(odd) {
+            background-color: $white-color;
+            color: $black-color;
         }
       }
 
-      &:nth-child(5n + 3) {
-        div.num {
-          background-color: $white-color;
-          color: $black-color;
-        }
-      }
 
-      &:nth-child(5n + 4) {
-        div.num {
-          background-color: $secoundary-color;
-          color: $black-color;
-        }
-      }
 
-      &:nth-child(5n + 5) {
-        div.num {
-          background-color: $primary-color;
-          color: $white-color;
-        }
-      }
     }
 
   }
