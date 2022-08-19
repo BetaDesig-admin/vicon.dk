@@ -215,14 +215,14 @@ footer {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      padding: 100px 0 200px;
+      padding: 200px 0;
 
       @media(max-width: 950px) {
         padding: 100px 0 100px;
       }
 
       @media(max-width: 650px) {
-        padding: 0;
+        padding: 100px 0 50px;
         text-align: center;
         max-width: 200px;
         margin: auto;

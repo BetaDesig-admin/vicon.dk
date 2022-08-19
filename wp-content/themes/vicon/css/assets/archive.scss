@@ -8,9 +8,31 @@ section.archive {
     div.single {
       flex-basis: 50%;
       padding: 230px;
+      @media(max-width: 1620px) {
+        padding: 165px;
+      }
+      @media(max-width: 1320px) {
+        padding: 125px;
+      }
+      @media(max-width: 1024px) {
+        flex-basis: 100%;
+      }
+      @media(max-width: 769px) {
+        padding: 100px 50px;
+      }
+
+      svg {
+        height: 115px;
+        @media(max-width: 1024px) {
+          height: 95px;
+        }
+      }
 
       &:nth-child(2) {
         margin-top: -100px;
+        @media(max-width: 1024px) {
+          margin-top: unset;
+        }
       }
 
       &:nth-child(4n + 2) {
@@ -18,9 +40,30 @@ section.archive {
         color: $black-color;
       }
 
-      &:nth-child(5n + 3) {
+      &:nth-child(4n + 3) {
         background-color: $primary-color;
         color: $white-color;
+        h2, p {
+          color: $white-color;
+        }
+      }
+      &:last-child(2) {
+        margin-bottom: -100px;
+        @media(max-width: 1024px) {
+          margin-bottom: unset;
+        }
+      }
+      @media(max-width: 1024px) {
+        &:nth-child(odd) {
+          background-color: $white-color;
+          h2, p {
+            color: $black-color;
+          }
+        }
+        &:nth-child(even) {
+          background-color: $secoundary-color;
+          color: $black-color;
+        }
       }
 
       h2 {
@@ -29,6 +72,12 @@ section.archive {
 
         font-size: 60px;
         font-weight: 700;
+        @media(max-width: 1320px) {
+          font-size: 40px;
+        }
+        @media(max-width: 1024px) {
+          font-size: 50px;
+        }
       }
 
       p {
@@ -39,19 +88,74 @@ section.archive {
 
       &.heading {
         display: flex;
+        flex-direction: column;
         justify-content: center;
-        align-items: center;
+        align-items: baseline;
         padding: 180px;
+        @media(max-width: 1620px) {
+          padding: 140px;
+        }
+        @media(max-width: 1320px) {
+          padding: 75px;
+        }
+        @media(max-width: 1024px) {
+          padding: 150px 125px;
+        }
+        @media(max-width: 769px) {
+          padding: 150px 50px;
+        }
 
         h1 {
           font-size: 100px;
           font-weight: 700;
           color: $primary-color;
           line-height: 1.1;
+          margin: unset;
+          @media(max-width: 1495px) {
+            font-size: 80px;
+          }
+        }
+        h2 {
+          font-size: 60px;
+          font-weight: 700;
+          color: $black-color;
+          line-height: 1.1;
+          margin: unset;
+          @media(max-width: 1320px) {
+            font-size: 40px;
+          }
+          @media(max-width: 1024px) {
+            font-size: 50px;
+          }
+        }
+        a.servicesContact {
+          float: left;
+          display: flex;
+          align-items: center;
+          text-decoration: none;
+          padding-top: 45px;
+          padding-bottom: 10px;
+          border-bottom: 1px solid $primary-color;
+          span {
+            font-family: $heading-font;
+            font-size: 25px;
+            font-weight: bold;
+            color: $primary-color;
+            margin: unset;
+          }
+          svg {
+            height: unset;
+            margin-left: 20px;
+            transition: .2s ease-in-out margin-left;
+          }
+          &:hover {
+            svg {
+              transition: .3s ease-in-out margin-left;
+              margin-left: 40px;
+            }
+          }
         }
       }
-
-
     }
   }
 

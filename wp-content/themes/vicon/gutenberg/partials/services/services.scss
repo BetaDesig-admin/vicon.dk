@@ -158,16 +158,18 @@ section.services {
     @media(max-width: 650px) {
       justify-content: center;
     }
-    p {
+
+    span {
       color: $primary-color;
       font-size: 25px;
       font-family: $heading-font;
       font-weight: bold;
       margin: unset;
       @media(max-width: 650px) {
-        display: none;
+        display: none
       }
     }
+
     svg {
       margin-left: 20px;
       transition: .2s ease-in-out margin-left;
@@ -182,6 +184,7 @@ section.services {
         margin-left: 40px;
       }
     }
+
     @media(max-width: 1150px) {
       margin: 50px 0;
     }
