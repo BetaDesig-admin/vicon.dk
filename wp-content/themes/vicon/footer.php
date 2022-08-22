@@ -82,8 +82,9 @@ $message = get_field('message');
                 </div>
             </div>
         </div>
-
+        <div class="copy">Vicon People ApS</div>
     </div>
+
 </footer>
 <?php wp_footer(); ?>
 </body>
