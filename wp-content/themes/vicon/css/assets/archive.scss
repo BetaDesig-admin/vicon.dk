@@ -52,7 +52,7 @@ section.archive {
       &.heading {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        //justify-content: center;
         align-items: baseline;
         padding: 180px;
         @media(max-width: 1620px) {

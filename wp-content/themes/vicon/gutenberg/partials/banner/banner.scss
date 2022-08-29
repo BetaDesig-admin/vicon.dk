@@ -1,6 +1,6 @@
 section.banner {
   max-width: 100%;
-  @media(min-width: 1600px) {
+  @media(min-width: 1450px) {
     height: 100vh;
   }
 
@@ -15,7 +15,7 @@ section.banner {
     left: 0;
     width: 100%;
 
-    @media(min-width: 1600px) {
+    @media(min-width: 1450px) {
       height: 100vh;
     }
 

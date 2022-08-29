@@ -1,18 +1,16 @@
 <?php
 
 
-$bigFooter = false;
 $showFooter = get_field('show_contact_form', get_the_ID());
-if (is_front_page()) {
-    $banner = get_field('footer_image', 'options')['url'];
-    $bigFooter = true;
-}
+
 
 $makeSpacing = '';
-if (!$bigFooter && $showFooter) {
+if ( $showFooter) {
     $makeSpacing = 'makeSpacing';
+    $banner = get_field('footer_image', 'options')['url'];
 }
-
+$name = get_field('company', 'options');
+$cvr = get_field('cvr', 'options');
 $email = get_field('infoemail', 'options');
 $phone = get_field('phone', 'options');
 $facebook = get_field('facebook', 'options');
@@ -31,7 +29,7 @@ $message = get_field('message');
 
 <footer class="<?= $makeSpacing ?>">
 
-    <?php if ($bigFooter) { ?>
+    <?php if ($showFooter && is_front_page()) { ?>
         <div class="image">
             <img src="<?= $banner ?>" alt="">
         </div>
@@ -39,7 +37,7 @@ $message = get_field('message');
 
     <div class="container">
 
-        <?php if ($bigFooter || $showFooter) {
+        <?php if ($showFooter || $showFooter) {
             $contactText = get_field('contact_form_text', get_the_ID());
             ?>
             <section class="form">
@@ -82,7 +80,7 @@ $message = get_field('message');
                 </div>
             </div>
         </div>
-        <div class="copy">Vicon People ApS</div>
+        <div class="copy"><strong><?= $name ?></strong><span><?= $cvr ?></span></div>
     </div>
 
 </footer>

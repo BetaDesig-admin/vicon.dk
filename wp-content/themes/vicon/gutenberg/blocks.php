@@ -50,7 +50,7 @@ function register_blocks()
     ]);
     acf_register_block([
         'name' => 'logoslider',
-        'title' => 'Virksomheder',
+        'title' => 'Slider',
         'render_template' => __DIR__ . '/partials/logo_slider/logo_slider.php',
         'category' => 'layout',
         'icon' => 'welcome-write-blog',

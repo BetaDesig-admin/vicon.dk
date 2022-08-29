@@ -1,42 +1,60 @@
 <?php
 $mode = get_field('layout');
+$content = get_field('content');
 $image = get_field('image');
 $heading = get_field('heading');
-$args = array(
-    'post_type' => 'company',
-    'post_status' => 'publish',
-    'posts_per_page' => -1,
-);
-
-if ($mode === 'single') {
-    $singles = get_field('singles');
-    $args['post__in'] = $singles;
-}
-$loop = new WP_Query($args);
 ?>
 
     <section class="companys">
         <div class="container swiper reseller">
-            <div class="heading">
-                <?= $heading ?>
-            </div>
+            <?php if ($heading) { ?>
+                <div class="heading">
+                    <?= $heading ?>
+                </div>
+            <?php } ?>
             <div class="swiper-wrapper">
-                <?php while ($loop->have_posts()) : $loop->the_post();
-                    $postID = get_the_ID();
-                    $logo = get_field('logo', $postID);
-                    $href = get_field('link', $postID);
-                    $active = get_field('active', $postID);
+                <?php
+                if ($content === 'logo') {
+
+                    $args = array(
+                        'post_type' => 'company',
+                        'post_status' => 'publish',
+                        'posts_per_page' => -1,
+                    );
+
+                    if ($mode === 'single') {
+                        $singles = get_field('singles');
+                        $args['post__in'] = $singles;
+                    }
+                    $loop = new WP_Query($args);
+
+                    while ($loop->have_posts()) : $loop->the_post();
+                        $postID = get_the_ID();
+                        $logo = get_field('logo', $postID);
+                        $href = get_field('link', $postID);
+                        $active = get_field('active', $postID);
 
 
-                    if ($active === 'active') {
+                        if ($active === 'active') {
+                            ?>
+                            <div class="single swiper-slide">
+                                <img src="<?= $logo['url'] ?>" alt="logo">
+                            </div>
+                            <?php
+                        }
+                    endwhile;
+                    wp_reset_postdata();
+                } else {
+                    $testimonials = get_field('testimonials');
+                    foreach ($testimonials as $test) {
                         ?>
                         <div class="single swiper-slide">
-                            <img src="<?= $logo['url'] ?>" alt="logo">
+                            <p class="heading"><strong><?= $test['heading'] ?></strong></p>
+                            <p><?= $test['content'] ?></p>
                         </div>
                         <?php
                     }
-                endwhile;
-                wp_reset_postdata();
+                }
                 ?>
             </div>
         </div>

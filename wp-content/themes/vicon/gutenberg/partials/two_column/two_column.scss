@@ -16,6 +16,7 @@ section.two_column {
   @media(max-width: 650px) {
     padding: 80px 25px;
   }
+
   div.container {
     div.content {
       display: flex;
@@ -47,6 +48,7 @@ section.two_column {
       &.first {
         order: 1;
       }
+
       @media(min-width: 1151px) {
         margin-bottom: -250px;
       }
@@ -107,6 +109,7 @@ section.two_column {
       }
     }
   }
+
   @media(max-width: 1025px) {
     div.container {
       gap: 25px;
@@ -147,4 +150,16 @@ section.two_column {
 
 section.two_column + section {
   padding-top: 200px;
+}
+
+.acf-block-preview {
+  section.two_column {
+    div.container {
+      div.content {
+        > div {
+          flex-basis: calc(50% - 30px);
+        }
+      }
+    }
+  }
 }
