@@ -1,35 +1,41 @@
 <?php get_header();
-$text    = get_field( 'serivces_text', 'options' );
-$image   = get_field( 'serivces_image', 'options' )['url'];
-$heading = get_field( 'services_heading', 'options' );
-$footer  = get_field( 'services_footer', 'options' );
+$text = get_field('serivces_text', 'options');
+$image = get_field('serivces_image', 'options')['url'];
+$heading = get_field('services_heading', 'options');
+$footer = get_field('services_footer', 'options');
 
-require_once( 'gutenberg/partials/banner/banner.php' )
+require_once('gutenberg/partials/banner/banner.php')
 ?>
     <section class="archive std services">
 
-        <div class="single heading"><h1><?= $heading ?></h1></div>
-		<?php if ( have_posts() ): ?>
-			<?php while ( have_posts() ) : the_post();
-				$svg  = get_field( 'svg_header' );
-				$desc = get_field( 'desc_details' );
-				?>
-                <div class="single">
-                    <div class="svg">
-						<?= file_get_contents( get_template_directory() . "/images/services/details/" . $svg . ".svg" ); ?>
+        <?php if ($heading) { ?>
+            <div class="single heading"><h1><?= $heading ?></h1></div>
+        <?php } ?>
+        <?php if (have_posts()): ?>
+            <?php while (have_posts()) : the_post();
+                $svg = get_field('svg_header');
+                $desc = get_field('desc_details');
+                $active = get_field('active');
+                if ($active !== 'deactive') {
+                    ?>
+                    <div class="single">
+                        <div class="svg">
+                            <?= file_get_contents(get_template_directory() . "/images/services/details/" . $svg . ".svg"); ?>
+                        </div>
+                        <div class="content">
+                            <h2><?php the_title(); ?></h2>
+                            <?= $desc ?>
+                        </div>
                     </div>
-                    <div class="content">
-                        <h2><?php the_title(); ?></h2>
-						<?= $desc ?>
-                    </div>
-                </div>
-				<?php the_excerpt(); ?>
-			<?php endwhile;
-			wp_reset_query(); ?>
-		<?php endif; ?>
+                    <?php the_excerpt(); ?>
+                    <?php
+                }
+            endwhile;
+            wp_reset_query(); ?>
+        <?php endif; ?>
         <div class="single heading">
             <h2><?= $footer ?></h2>
-            <a href="#" class="servicesContact">
+            <a href="/kontakt" class="servicesContact">
                 <span>Kontakt os</span>
                 <svg xmlns="http://www.w3.org/2000/svg"
                      xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="40"

@@ -5,7 +5,7 @@ $showFooter = get_field('show_contact_form', get_the_ID());
 
 
 $makeSpacing = '';
-if ( $showFooter) {
+if ($showFooter) {
     $makeSpacing = 'makeSpacing';
     $banner = get_field('footer_image', 'options')['url'];
 }
@@ -21,7 +21,7 @@ $street = get_field('street', 'options');
 $zip = get_field('zip', 'options');
 $city = get_field('city', 'options');
 
-$address = $street . ', ' . $zip . ' ' . $city;
+$address = $street . '<br/> ' . $zip . ' ' . $city;
 
 $message = get_field('message');
 
@@ -68,7 +68,9 @@ $message = get_field('message');
                 </div>
             <?php } ?>
             <div class="section">
-                <h4>Følg os</h4>
+                <?php if ($facebook || $linkedin) { ?>
+                    <h4>Følg os</h4>
+                <?php } ?>
                 <div class="socials">
                     <?php if ($facebook) { ?>
                         <a href="<?= $facebook ?>"><?= file_get_contents(get_template_directory() . "/images/SVG/facebook.svg"); ?></a>
@@ -80,7 +82,7 @@ $message = get_field('message');
                 </div>
             </div>
         </div>
-        <div class="copy"><strong><?= $name ?></strong><span><?= $cvr ?></span></div>
+        <div class="copy"><strong><?= $name ?></strong><span>CVR: <?= $cvr ?></span></div>
     </div>
 
 </footer>

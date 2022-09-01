@@ -76,7 +76,9 @@ section.banner {
         font-family: $heading-font;
         font-weight: 900;
         line-height: 1;
-        text-shadow: 1px 0px 1px rgba(46, 46, 46, .4);
+        text-shadow: 0px 3px 0px #000, 0px 14px 10px rgba(0, 0, 0, 0.15),
+        0px 24px 2px rgba(0, 0, 0, 0.1), 0px 24px 30px rgba(0, 0, 0, 0.1);
+        //text-shadow: 1px 0px 1px rgba(46, 46, 46, .4);
         color: $white-color;
       }
 
@@ -165,6 +167,41 @@ section.banner {
           font-size: 30px;
         }
       }
+    }
+  }
+
+  div.scroll {
+    z-index: 10;
+    cursor: pointer;
+    position: absolute;
+    bottom: 120px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+    &:hover {
+      #scrollTo {
+        svg {
+          transition: .3s ease-in-out margin-top;
+          margin-top: 5px;
+        }
+      }
+    }
+
+    #scrollTo {
+      display: flex;
+      flex-direction: row;
+      color: $white-color;
+      font-size: 22px;
+
+      svg {
+        transition: .2s ease-in-out margin-top;
+        width: 30px;
+        height: 30px;
+        fill: $white-color;
+      }
+
     }
   }
 }

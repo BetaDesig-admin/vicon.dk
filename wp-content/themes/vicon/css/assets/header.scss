@@ -62,6 +62,7 @@ header {
               @media(max-width: 1025px) {
                 font-size: 22px;
               }
+
               &:hover {
                 border-bottom: 1px solid $primary-color;
                 position: relative;
@@ -232,10 +233,6 @@ header {
 
     &.nobanner {
       div.container {
-        label span {
-          background: $black-color;
-        }
-
         section.logo {
           svg {
             * {

@@ -4,7 +4,6 @@ $image = get_field('process_image', 'options')['url'];
 $heading = get_field('process_heading', 'options');
 $footer = get_field('process_footer', 'options');
 require_once('gutenberg/partials/banner/banner.php')
-
 ?>
     <section class="archive std process">
 
@@ -14,29 +13,32 @@ require_once('gutenberg/partials/banner/banner.php')
             ?>
             <?php while (have_posts()) : the_post();
             $desc = get_field('desc');
+            $active = get_field('active');
 
-            if ($p < 10) {
-                $p = '0' . $p;
+
+            if ($active !== 'deactive') {
+                if ($p < 10) {
+                    $p = '0' . $p;
+                }
+                ?>
+                <div class="single">
+                    <div class="num">
+                        <?= $p ?>
+                    </div>
+                    <div class="content">
+                        <h2><?php the_title(); ?></h2>
+                        <?= $desc ?>
+                    </div>
+                </div>
+                <?php
+                $p++;
             }
-
-            ?>
-            <div class="single">
-                <div class="num">
-                    <?= $p ?>
-                </div>
-                <div class="content">
-                    <h2><?php the_title(); ?></h2>
-                    <?= $desc ?>
-                </div>
-            </div>
-            <?php
-            $p++;
         endwhile;
             wp_reset_query(); ?>
         <?php endif; ?>
         <div class="single heading">
             <h2><?= $footer ?></h2>
-            <a href="#" class="servicesContact">
+            <a href="/kontakt" class="servicesContact">
                 <span>Kontakt os</span>
                 <svg xmlns="http://www.w3.org/2000/svg"
                      xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="40"

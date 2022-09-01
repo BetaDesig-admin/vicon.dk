@@ -30,7 +30,7 @@ $i = 1;
                 <div class="swiper processSlider">
                     <div class="singles swiper-wrapper">
 						<?php while ( $loop->have_posts() ) : $loop->the_post();
-							$desc = get_field( 'desc', get_the_ID() );
+							$desc = get_field( 'short_desc', get_the_ID() );
 							?>
                             <div class="single swiper-slide">
                                 <div class="num">

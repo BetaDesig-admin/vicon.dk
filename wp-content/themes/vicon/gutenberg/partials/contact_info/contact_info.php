@@ -36,7 +36,9 @@ $address = $street . ', ' . $zip . ' ' . $city;
                     </div>
 
                     <div class="single location">
-                        <h3>Følg os</h3>
+                        <?php if ($facebook || $linkedin) { ?>
+                            <h3>Følg os</h3>
+                        <?php } ?>
                         <div class="socials">
                             <?php if ($facebook) { ?>
                                 <a href="<?= $facebook ?>"><?= file_get_contents(get_template_directory() . "/images/SVG/facebook_black.svg"); ?></a>

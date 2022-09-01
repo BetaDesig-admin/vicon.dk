@@ -34,10 +34,10 @@ function register_blocks()
     ]);
     acf_register_block([
         'name' => 'banner',
-        'title' => 'Banner',
+        'title' => 'Top Banner',
         'render_template' => __DIR__ . '/partials/banner/banner.php',
         'category' => 'layout',
-        'icon' => 'welcome-write-blog',
+        'icon' => 'format-image',
         'mode' => 'preview',
     ]);
     acf_register_block([
@@ -45,7 +45,7 @@ function register_blocks()
         'title' => 'Kontakt information',
         'render_template' => __DIR__ . '/partials/contact_info/contact_info.php',
         'category' => 'layout',
-        'icon' => 'welcome-write-blog',
+        'icon' => 'email',
         'mode' => 'preview',
     ]);
     acf_register_block([
@@ -53,7 +53,7 @@ function register_blocks()
         'title' => 'Slider',
         'render_template' => __DIR__ . '/partials/logo_slider/logo_slider.php',
         'category' => 'layout',
-        'icon' => 'welcome-write-blog',
+        'icon' => 'images-alt',
         'mode' => 'preview',
     ]);
 
@@ -62,15 +62,15 @@ function register_blocks()
         'title' => 'Ydelser',
         'render_template' => __DIR__ . '/partials/services/services.php',
         'category' => 'layout',
-        'icon' => 'welcome-write-blog',
+        'icon' => 'heart',
         'mode' => 'preview',
     ]);
     acf_register_block([
         'name' => 'process',
-        'title' => 'Processen',
+        'title' => 'Proces',
         'render_template' => __DIR__ . '/partials/process/process.php',
         'category' => 'layout',
-        'icon' => 'welcome-write-blog',
+        'icon' => 'star-filled',
         'mode' => 'preview',
     ]);
 	acf_register_block([
@@ -78,7 +78,7 @@ function register_blocks()
 		'title' => 'Uopfordret ansøgning',
 		'render_template' => __DIR__ . '/partials/application/application.php',
 		'category' => 'layout',
-		'icon' => 'welcome-write-blog',
+		'icon' => 'clipboard',
 		'mode' => 'preview',
 	]);
 	acf_register_block([
@@ -86,7 +86,7 @@ function register_blocks()
 		'title' => 'Jobliste',
 		'render_template' => __DIR__ . '/partials/joblist/joblist.php',
 		'category' => 'layout',
-		'icon' => 'welcome-write-blog',
+		'icon' => 'groups',
 		'mode' => 'preview',
 	]);
 }
