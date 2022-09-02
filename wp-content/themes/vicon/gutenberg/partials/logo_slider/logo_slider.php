@@ -69,27 +69,26 @@ $heading = get_field('heading');
         const swiper = new Swiper('.swiper.container.reseller', {
             direction: 'horizontal',
             loop: true,
+            spaceBetween: 100,
             //centeredSlides: true,
             autoplay: {
-                delay: 2500,
+                delay: 5000,
             },
             breakpoints: {
                 // when window width is >= 320px
                 1024: {
-                    slidesPerView: 5,
+                    slidesPerView: 4,
                 },
                 650: {
-                    slidesPerView: 4,
+                    slidesPerView: 3,
                 },
                 450: {
                     slidesPerView: 2,
                 },
                 320: {
-                    slidesPerView: 2,
+                    slidesPerView: 1,
                 }
             }
         });
     </script>
 <?php
-
-
