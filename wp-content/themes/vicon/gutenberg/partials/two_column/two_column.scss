@@ -1,7 +1,7 @@
 @import "../../../css/import/variables";
 
 section.two_column {
-  padding: 200px 0;
+  padding: 175px 0;
   background-color: $white-color;
 
   @media(max-width: 1150px) {
@@ -50,7 +50,7 @@ section.two_column {
       }
 
       @media(min-width: 1151px) {
-        margin-bottom: -250px;
+        margin-bottom: -200px;
       }
       @media(max-width: 1150px) {
         margin-bottom: -150px;
