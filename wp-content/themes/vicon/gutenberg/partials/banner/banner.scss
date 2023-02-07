@@ -84,7 +84,10 @@ section.banner {
       h1 {
         font-size: 80px;
         color: $white-color;
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
         hyphens: auto;
+        word-break: break-word;
 
         @media(min-width: 1400px){
           hyphens: unset;
@@ -98,7 +101,6 @@ section.banner {
         }
         @media(max-width: 650px) {
           font-size: 50px;
-          padding: 0 20px;
         }
       }
 
